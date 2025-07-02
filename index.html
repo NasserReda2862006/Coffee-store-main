@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Brew Haven - Premium Coffee Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" > <img src="images/coffee logo.png"  alt="logo" ></div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="nav-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                <div class="search-container" id="searchContainer">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search our menu...">
+                </div>
+                <button class="nav-btn" id="cartBtn">🛒 <span id="cartCount">0</span></button>
+                <button class="mobile-menu" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Savor the Elegance of Every Sip</h1>
+                <p>Awaken your senses with the exquisite aroma of freshly brewed perfection — where every sip feels like home, and every moment is steeped in charm.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('menu')">Order Now</button>
+                    <button class="btn-secondary" onclick="scrollToSection('menu')">Explore Menu</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="coffee-scene">
+                    <div class="coffee-cup">
+                        <div class="cup-handle"></div>
+                        <div class="cup-body">
+                            <div class="coffee-liquid">
+                                <div class="coffee-foam"></div>
+                            </div>
+                        </div>
+                        <div class="steam"></div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="coffee-bean"></div>
+                        <div class="coffee-bean"></div>
+                        <div class="coffee-bean"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-title">
+            <h2>About <span class="highlight">Us</span></h2>
+            <p>Crafting exceptional coffee experiences since 2020</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>What makes our coffee special?</h3>
+                <p>At Brew Haven, we believe that every cup tells a story. Our passion for exceptional coffee drives us to source the finest beans from sustainable farms around the world.</p>
+                <p>From our expert roasting techniques to our skilled baristas, every step of our process is designed to deliver an unparalleled coffee experience that awakens your senses and brightens your day.</p>
+                <button class="btn-primary" onclick="scrollToSection('contact')">Learn More</button>
+            </div>
+            <div class="about-image">
+                <h3>🌟 Premium Quality</h3>
+                <p>Ethically sourced beans from the world's finest coffee regions</p>
+                <br>
+                <h3>👨‍🍳 Expert Craftsmanship</h3>
+                <p>Skilled baristas trained in the art of coffee perfection</p>
+                <br>
+                <h3>🌱 Sustainability</h3>
+                <p>Committed to environmental responsibility and fair trade</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section" id="menu">
+        <div class="section-title">
+            <h2>Our <span class="highlight">Menu</span></h2>
+            <p>Discover our carefully crafted coffee creations</p>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Signature Espresso" data-price="5.99" data-image="images/menu-1.jpg">
+                <!-- Example for a menu item image (repeat for all images) -->
+                <div class="menu-image">
+                    <img src="images/menu-1.jpg" 
+                         data-src="images/menu-1.jpg" 
+                         data-src-md="images/menu-1.jpg" 
+                         data-src-sm="images/menu-1.jpg" 
+                         alt="Signature Espresso">
+                </div>
+                <h3>Signature Espresso</h3>
+                <p>Our signature blend of premium coffee beans, perfectly roasted and brewed to perfection.</p>
+                <div class="price-section">
+                    <span class="price">$5.99</span>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Caramel Macchiato" data-price="6.49" data-image="images/menu-2.jpg">
+                <div class="menu-image">
+                    <img src="images/menu-2.jpg" alt="Caramel Macchiato">
+                </div>
+                <h3>Caramel Macchiato</h3>
+                <p>Espresso combined with vanilla-flavored syrup, milk and caramel sauce.</p>
+                <div class="price-section">
+                    <span class="price">$6.49</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Mocha Frappuccino" data-price="7.29" data-image="images/menu-3.jpg">
+                <div class="menu-image">
+                    <img src="images/menu-3.jpg" alt="Mocha Frappuccino">
+                </div>
+                <h3>Mocha Frappuccino</h3>
+                <p>Coffee blended with ice and mocha sauce, topped with whipped cream.</p>
+                <div class="price-section">
+                    <span class="price">$7.29</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- New Menu Items -->
+            <div class="menu-item" data-name="Vanilla Latte" data-price="6.99" data-image="images/product-1.jpg">
+                <div class="menu-image">
+                    <img src="images/product-1.jpg" alt="Vanilla Latte">
+                </div>
+                <h3>Vanilla Latte</h3>
+                <p>Espresso with steamed milk and a hint of vanilla, topped with a light layer of foam.</p>
+                <div class="price-section">
+                    <span class="price">$6.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Hazelnut Cappuccino" data-price="7.49" data-image="images/product-2.jpg">
+                <div class="menu-image">
+                    <img src="images/product-2.jpg" alt="Hazelnut Cappuccino">
+                </div>
+                <h3>Hazelnut Cappuccino</h3>
+                <p>Rich espresso with steamed milk, hazelnut syrup, and a thick layer of foam.</p>
+                <div class="price-section">
+                    <span class="price">$7.49</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Iced Americano" data-price="5.49" data-image="images/product-3.jpg">
+                <div class="menu-image">
+                    <img src="images/product-3.jpg" alt="Iced Americano">
+                </div>
+                <h3>Iced Americano</h3>
+                <p>Espresso shots topped with cold water to produce a light layer of crema, served over ice.</p>
+                <div class="price-section">
+                    <span class="price">$5.49</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Chai Tea Latte" data-price="6.79" data-image="images/blog-1.jpg">
+                <div class="menu-image">
+                    <img src="images/blog-1.jpg" alt="Chai Tea Latte">
+                </div>
+                <h3>Chai Tea Latte</h3>
+                <p>Black tea infused with cinnamon, clove, and other warming spices combined with steamed milk.</p>
+                <div class="price-section">
+                    <span class="price">$6.79</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Pumpkin Spice Latte" data-price="7.99" data-image="images/blog-2.jpg">
+                <div class="menu-image">
+                    <img src="images/blog-2.jpg" alt="Pumpkin Spice Latte">
+                </div>
+                <h3>Pumpkin Spice Latte</h3>
+                <p>Espresso with steamed milk, pumpkin spice syrup, topped with whipped cream and pumpkin pie spices.</p>
+                <div class="price-section">
+                    <span class="price">$7.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Cold Brew" data-price="5.99" data-image="images/blog-3.jpg">
+                <div class="menu-image">
+                    <img src="images/blog-3.jpg" alt="Cold Brew">
+                </div>
+                <h3>Cold Brew</h3>
+                <p>Coffee brewed with cold water for 12+ hours, resulting in a smooth, less acidic flavor profile.</p>
+                <div class="price-section">
+                    <span class="price">$5.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="section-title">
+            <h2>Customer <span class="highlight">Testimonials</span></h2>
+            <p>What our coffee lovers say about us</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonials-carousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The atmosphere is cozy and inviting, but it's their signature espresso that keeps me coming back. Rich, smooth, and perfectly balanced. Absolutely the best coffee shop in town!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/user-1.jpg" alt="Customer 1">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I've tried coffee shops all over the city, and Brew Haven stands out for their attention to detail. Their Caramel Macchiato is divine, and the staff always remembers my name and order!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/user-2.jpg" alt="Customer 2">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Coffee Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"As a remote worker, I need a reliable place with good coffee and WiFi. Brew Haven exceeds expectations on both fronts. The Cold Brew is refreshing and keeps me productive all afternoon!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/user-3.jpg" alt="Customer 3">
+                            <div class="author-info">
+                                <h4>Emily Rodriguez</h4>
+                                <p>Digital Nomad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The Hazelnut Cappuccino here is simply outstanding! I appreciate how they source their beans ethically and support local farmers. It's a coffee shop with both great taste and values."</p>
+                        <div class="testimonial-author">
+                            <img src="images/user-1.jpg" alt="Customer 4">
+                            <div class="author-info">
+                                <h4>David Wilson</h4>
+                                <p>Sustainability Advocate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I hosted a business meeting in their private area, and everyone was impressed with both the service and quality. The Vanilla Latte is exceptional, and their pastries are the perfect complement!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/user-2.jpg" alt="Customer 5">
+                            <div class="author-info">
+                                <h4>Olivia Thompson</h4>
+                                <p>Business Professional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-control" id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="carousel-control" id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Opening Hours Section -->
+    <section class="section" id="location">
+        <div class="section-title">
+            <h2>Location & <span class="highlight">Opening Hours</span></h2>
+            <p>Find us and visit at your convenience</p>
+        </div>
+        <div class="location-content">
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3455.0603386619846!2d31.069108434885713!3d30.006423781896057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snew%20giza%20sports%20club%20location!5e0!3m2!1sar!2seg!4v1751462846734!5m2!1sar!2seg" 
+                        style="border:0; width:100%; height:450px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="location-details">
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <div class="location-info">
+                        <h3>Our Address</h3>
+                        <p>NGSC, Administration Office, BV 12345</p>
+                        <p>Located in the heart of NGSC, near Administration Office</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">⏰</div>
+                    <div class="location-info">
+                        <h3>Opening Hours</h3>
+                        <div class="hours-grid">
+                            <div class="day">Monday - Friday</div>
+                            <div class="time">7:00 AM - 8:00 PM</div>
+                            <div class="day">Saturday</div>
+                            <div class="time">8:00 AM - 9:00 PM</div>
+                            <div class="day">Sunday</div>
+                            <div class="time">8:00 AM - 7:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">🚗</div>
+                    <div class="location-info">
+                        <h3>Parking Information</h3>
+                        <p>Free parking available for customers</p>
+                        <p>Street parking also available nearby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-title">
+            <h2>Contact <span class="highlight">Us</span></h2>
+            <p>We'd love to hear from you</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>Located in the heart of NGSC, near Administration Office</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📱 Phone</h4>
+                    <p>+20 1211-088245</p>
+                </div>
+                <div class="contact-item">
+                    <h4>✉️ Email</h4>
+                    <p>10112024103728@stud.cu.edu.eg</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">Brew Haven</div>
+                <p class="footer-tagline">Premium Coffee Experience</p>
+            </div>
+            <div class="footer-middle">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#location">Location</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Brew Haven By Nasser Reda. All rights reserved.</p>
+                <p class="footer-heart">Made with ❤️ by a Coffee Lover</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-primary" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div class="search-results-container" id="searchResultsContainer">
+        <div class="search-results" id="searchResults">
+            <!-- Search results will be added here dynamically -->
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+       <!-- Go to Top Button -->
+    <div class="go-to-top" id="goToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Add this before the closing body tag -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">Brew Haven</div>
+            <button class="close-mobile-menu" id="closeMobileMenu">×</button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#menu" class="mobile-nav-link">Menu</a>
+            <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="#location" class="mobile-nav-link">Location</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+    <!-- Existing script tag -->
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+
