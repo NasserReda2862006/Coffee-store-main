@@ -68,8 +68,8 @@ header.scrolled {
 }
 
 .logo img {
-    height: 85px;
-    width: 85px;
+    height: 65px;
+    width: auto;
     margin-right: 10px;
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
     transition: all 0.3s ease;
@@ -189,7 +189,6 @@ header.scrolled {
     opacity: 1; /* Ensure full opacity */
     position: relative; /* Ensure proper stacking context */
     z-index: 5; /* Higher z-index to ensure visibility */
-    margin-top: 50px;
 }
 
 .hero-content p {
@@ -1027,9 +1026,11 @@ footer::before {
     .mobile-menu {
         display: block;
     }
+    
 
-    header {
-        padding: 10px 5%;
+     .header {
+        height: auto;
+        padding: 10px 0;
     }
     
     header.scrolled {
@@ -1038,18 +1039,20 @@ footer::before {
 
     .nav-container {
         padding: 0 10px;
+        
     }
-    
-    .logo {
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
+       .logo {
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+            text-align: center;
+        margin-bottom: 15px;
     }
     
     .logo img {
-        height: 50px; /* Increased from 40px */
+        height: 60px; /* Increased from 50px for better visibility */
         margin-right: 8px;
-        filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+        filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6)); /* Enhanced glow effect */
     }
 
     .nav-links {
@@ -1070,7 +1073,8 @@ footer::before {
     }
 
     .hero {
-        padding-top: 80px;
+        padding-top: 180px;
+
     }
 
     .hero-container {
@@ -1103,17 +1107,43 @@ footer::before {
     
     .contact-content {
         gap: 2rem;
+        text-align: center; /* Center text in contact section */
+    }
+   .contact-section {
+        padding: 20px 15px;
     }
     
     .contact-info {
-        display: flex;
-        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .contact-info h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-info p {
+        font-size: 14px;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
+
+     .contact-info a {
+        display: block;
+        margin: 10px 0;
+        word-break: break-all;
+    }
+    
+    .contact-item {
+        width: 100%; /* Full width for all contact items */
+        text-align: center; /* Center text in contact items */
     }
     
     .contact-item:nth-child(2) {
-        /* Phone contact item */
-        align-self: flex-end;
-        width: 80%;
+        /* Phone contact item - remove the offset alignment */
+        align-self: center;
+        width: 100%;
     }
 
     .menu-grid {
@@ -1129,6 +1159,29 @@ footer::before {
         height: 280px;
         animation: float 4s ease-in-out infinite;
         will-change: transform;
+    }
+
+      .logo, .logo img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+    
+    /* Contact Section Fixes */
+    .contact-section {
+        padding: 20px 15px;
+    }
+    
+    .contact-info {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .contact-info a {
+        word-break: break-word;
+        display: inline-block;
+        margin: 5px 0;
     }
 
     .coffee-cup {
@@ -1318,9 +1371,11 @@ footer::before {
         align-items: center;
     }
     
-    .logo img {
-        height: 45px; /* Increased from 35px */
-    }
+   .logo img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
     
     .hero-content h1 {
         font-size: 2.5rem;
